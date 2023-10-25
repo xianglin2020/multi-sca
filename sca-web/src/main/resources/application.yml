@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: sca-web
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.31.114
+
+server:
+  port: 9901

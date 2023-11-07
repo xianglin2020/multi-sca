@@ -7,7 +7,12 @@
 rootProject.name = "multi-sca"
 include(
     "spring-boot-app",
-    "sca-api",
-    "sca-service",
-    "sca-web"
+    "nacos:sca-api",
+    "nacos:sca-service",
+    "nacos:sca-web",
+    "seata:account-server",
+    "seata:business-server",
+    "seata:order-server",
+    "seata:storage-server",
+    "seata:seata-base",
 )

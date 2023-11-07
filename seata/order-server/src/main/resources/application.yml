@@ -1,0 +1,8 @@
+server:
+  port: 18083
+
+spring:
+  profiles:
+    include: base
+  application:
+    name: seata-order-service

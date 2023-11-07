@@ -1,0 +1,27 @@
+spring:
+  application:
+    name: sca-web
+  cloud:
+    nacos:
+      config:
+        server-addr: ${nacos.server-addr}
+        namespace: dev-env
+      discovery:
+        server-addr: ${nacos.server-addr}
+    loadbalancer:
+      nacos:
+        enabled: true
+    sentinel:
+      transport:
+        dashboard: 192.168.31.114:8080
+        port: 8719
+  config:
+    import:
+      - nacos:sca-web-config.properties
+
+
+server:
+  port: 9901
+
+nacos:
+  server-addr: 192.168.31.231,192.168.31.232,192.168.31.233

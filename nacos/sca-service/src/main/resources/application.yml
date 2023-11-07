@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: sca-service
+  cloud:
+    nacos:
+      discovery:
+        server-addr: ${nacos.server-addr}
+# -Dport=9000
+server:
+  port: ${port:9000}
+
+nacos:
+  server-addr: 192.168.31.231,192.168.31.232,192.168.31.233

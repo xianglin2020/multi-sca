@@ -1,0 +1,13 @@
+server:
+  port: 18081
+
+spring:
+  profiles:
+    include: base
+  application:
+    name: seata-business-service
+
+logging:
+  level:
+    io:
+      seata: debug

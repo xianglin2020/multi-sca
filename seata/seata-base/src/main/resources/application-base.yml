@@ -1,0 +1,32 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.31.114:8848
+      config:
+        server-addr: 192.168.31.114:8848
+        group: SEATA_GROUP
+  config:
+    import:
+      - nacos:seata.properties?refresh=true
+  main:
+    allow-bean-definition-overriding: true
+  datasource:
+    name: storageDataSource
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.31.114:3306/sca?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 950915
+
+seata:
+  enabled: true
+  application-id: ${spring.application.name}
+  tx-service-group: default_tx_group
+  config:
+    type: nacos
+    nacos:
+      server-addr: 192.168.31.114:8848
+  registry:
+    type: nacos
+    nacos:
+      server-addr: 192.168.31.114:8848

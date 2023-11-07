@@ -1,0 +1,8 @@
+server:
+  port: 18082
+
+spring:
+  profiles:
+    include: base
+  application:
+    name: seata-storage-service

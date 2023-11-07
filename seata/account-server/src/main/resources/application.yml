@@ -1,0 +1,8 @@
+server:
+  port: 18084
+
+spring:
+  profiles:
+    include: base
+  application:
+    name: seata-account-service
